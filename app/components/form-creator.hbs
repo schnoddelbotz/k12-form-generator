@@ -1,12 +1,14 @@
+<!-- Form creator to design the form  -->
 <div class="creator">
     <h2>Customise your form here</h2>
 
     [ Add Button ] [ Add ... ]
 
-<p>TODO: Have {{this.count}} components here</p>
-<button type="button" {{on "click" (fn this.change 1)}}>+1</button>
-<button type="button" {{on "click" (fn this.change -1)}}>-1</button>
-
-    <FormGenerator @count={{this.count}} />
-
+    <p>TODO: Have {{this.count}} components here</p>
+    <button type="button" {{on "click" (fn this.change 1)}}>+1</button>
+    <button type="button" {{on "click" (fn this.change -1)}}>-1</button>
 </div>
+
+<!-- Form generator showing HTML FORM code -->
+{{!-- Unsure whether this is the "ideal" or idiomatic way of doing this .. --}}
+<FormGenerator @count={{this.count}} />

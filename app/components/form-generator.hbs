@@ -1,13 +1,15 @@
 <div class="generator">
     <h2>HTML &lt;form&gt; code</h2> 
-    {{!-- https://stackoverflow.com/questions/32480227/creating-a-raw-html-component-in-ember-2-0 --}}
-    <pre>
-        [ COPY TO CLIPBOARD ] [ DOWNLOAD ] 
+    {{!-- https://stackoverflow.com/questions/32480227/creating-a-raw-html-component-in-ember-2-0 --}}    
+    <CopyButton @text="{{this.args.count}}"> 
+        Click here to copy code shown above to your clipboard m(
+    </CopyButton>
+    <pre>        
         ~~~~~
-        Count: {{this.count}}
+        Count: {{this.args.count}}
         ~~~~~
         <code>{{ this.formcode }}</code>
         ~~~~~
         EOF
-    </pre>
+    </pre>    
 </div>
