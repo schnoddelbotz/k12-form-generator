@@ -3,10 +3,13 @@ import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
 
 export default class FormCreatorComponent extends Component {
-  @tracked count = 0;
+  @tracked formItems = [];
 
   @action
-  change(amount) {
-    this.count = this.count + amount;
-  }
+  add(what) {
+    // https://stackoverflow.com/questions/57468327/why-wont-my-tracked-array-update-in-ember-octane
+    // this.formItems.push(what);
+    this.formItems = [...this.formItems, what];
+    console.log(this.formItems);
+  }  
 }

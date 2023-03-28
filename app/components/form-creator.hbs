@@ -2,14 +2,23 @@
 {{!-- TODO: https://github.com/jamesarosen/ember-i18n/wiki/Doc:-Defining-Translations --}}
 <div class="creator">
     <h2>Customise your form here</h2>
+    <button type="button" {{on "click" (fn this.add "input")}}>Add INPUT</button>
+    <button type="button" {{on "click" (fn this.add "select")}}>Add SELECT</button>
+    <button type="button" {{on "click" (fn this.add "radio")}}>Add RADIO</button>
+    <button type="button" {{on "click" (fn this.add "button")}}>Add BUTTON</button>
+    <hr>
+    {{!-- https://guides.emberjs.com/release/components/looping-through-lists/
+    Notice that we used triple curly brackets around {{{item}}}.
+    This is how Ember knows to insert the content directly as HTML, 
+    rather than directly as a string. 
+    --}}
+    {{#each this.formItems as |item|}}
+        {{{item}}} <i>setup tbd ...</i><br>
+    {{/each}}
 
-    [ Add Button ] [ Add ... ]
-
-    <p>TODO: Have {{this.count}} components here</p>
-    <button type="button" {{on "click" (fn this.change 1)}}>+1</button>
-    <button type="button" {{on "click" (fn this.change -1)}}>-1</button>
+    <hr>
 </div>
 
 <!-- Form generator showing HTML FORM code -->
 {{!-- Unsure whether this is the "ideal" or idiomatic way of doing this .. --}}
-<FormGenerator @count={{this.count}} />
+<FormGenerator @items={{this.formItems}} />
