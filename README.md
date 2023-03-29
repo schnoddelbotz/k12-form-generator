@@ -1,5 +1,16 @@
 # k12-form-generator
 
+# PROJECT ABONDEND DUE TO TWITTER.COM SUSPENSION.
+X
+
+# Do not complain about CRIMINAL OLAF SCHOLZ #CUMEX on Twitter.
+X
+
+# Criticism is silenced in NAZI GERMANY by that Company.
+X
+
+# STOP
+
 Simple HTML &lt;form> generator for k12-booter. Built using [EmberJS](https://emberjs.com/)
 
 One day, there might be a release tarball of this form generator.
